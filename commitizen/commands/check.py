@@ -23,11 +23,11 @@ class Check:
             arguments: All the flags provided by the user
             cwd: Current work directory
         """
+        print(arguments)
         self.commit_msg_file: Optional[str] = arguments.get("commit_msg_file")
         self.commit_msg: Optional[str] = arguments.get("message")
         self.rev_range: Optional[str] = arguments.get("rev_range")
         
-        print(self.commit_msg_file)
         self._valid_command_argument()
 
         self.config: BaseConfig = config
